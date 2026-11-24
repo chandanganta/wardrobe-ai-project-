@@ -1,0 +1,559 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wardrobe AI | Your Personal AI Stylist</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <a href="#" class="logo">
+            WARDROBE<span>AI.</span>
+        </a>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="#home">Home</a>
+            <a href="#wardrobe">My Wardrobe</a>
+            <a href="#upload">Add Clothes</a>
+            <a href="#outfits">Discover Outfits</a>
+        </nav>
+
+        <button class="nav-btn"
+            onclick="document.getElementById('upload').scrollIntoView({behavior:'smooth'})">
+            Get Started
+        </button>
+
+        <button class="menu-toggle" id="menuToggle">
+            ☰
+        </button>
+
+    </header>
+
+
+    <!-- HERO SECTION -->
+
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <p class="eyebrow">YOUR STYLE, REIMAGINED</p>
+
+            <h1>
+                Your wardrobe.<br>
+                Your style.<br>
+                <span>Powered by AI.</span>
+            </h1>
+
+            <p class="hero-description">
+                Discover new ways to style what you already own.
+                Let intelligent fashion recommendations make
+                getting dressed a little more exciting.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#upload" class="primary-btn">
+                    Explore Your Wardrobe →
+                </a>
+
+                <a href="#outfits" class="secondary-btn">
+                    Discover Style
+                </a>
+
+            </div>
+
+            <div class="hero-stats">
+
+                <div>
+                    <h3>01</h3>
+                    <p>Upload</p>
+                </div>
+
+                <div>
+                    <h3>02</h3>
+                    <p>Discover</p>
+                </div>
+
+                <div>
+                    <h3>03</h3>
+                    <p>Style</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1000"
+                alt="Fashion collection"
+            >
+
+            <div class="floating-card">
+
+                <span>✦</span>
+
+                <div>
+                    <h4>Style starts here</h4>
+                    <p>Make more of what you own.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FEATURE STRIP -->
+
+    <section class="features">
+
+        <div>
+            <span>✦</span>
+            Smart Clothing Recognition
+        </div>
+
+        <div>
+            <span>✦</span>
+            Personalised Outfit Ideas
+        </div>
+
+        <div>
+            <span>✦</span>
+            Your Digital Wardrobe
+        </div>
+
+    </section>
+
+
+    <!-- WARDROBE SECTION -->
+
+    <section class="wardrobe-section" id="wardrobe">
+
+        <div class="section-heading">
+
+            <div>
+                <p class="eyebrow">YOUR PERSONAL COLLECTION</p>
+
+                <h2>My Wardrobe</h2>
+
+                <p class="section-description">
+                    Everything you own, organised in one place.
+                </p>
+            </div>
+
+            <a href="#upload" class="outline-btn">
+                + Add New Item
+            </a>
+
+        </div>
+
+
+        <!-- WARDROBE STATISTICS -->
+
+        <div class="wardrobe-stats">
+
+            <div class="stat-card">
+                <p>Total Items</p>
+                <h3 id="totalItems">0</h3>
+            </div>
+
+            <div class="stat-card">
+                <p>Categories</p>
+                <h3>04</h3>
+            </div>
+
+            <div class="stat-card">
+                <p>Outfits Created</p>
+                <h3 id="outfitsCreated">00</h3>
+            </div>
+
+        </div>
+
+
+        <!-- CATEGORY FILTERS -->
+
+        <div class="category-filters">
+
+            <button class="filter-btn active" data-category="All">
+                All Items
+            </button>
+
+            <button class="filter-btn" data-category="Tops">
+                Tops
+            </button>
+
+            <button class="filter-btn" data-category="Bottoms">
+                Bottoms
+            </button>
+
+            <button class="filter-btn" data-category="Shoes">
+                Shoes
+            </button>
+
+            <button class="filter-btn" data-category="Accessories">
+                Accessories
+            </button>
+
+        </div>
+
+
+        <!-- WARDROBE ITEMS -->
+
+        <div class="wardrobe-grid" id="wardrobeGrid">
+
+            <div class="empty-state">
+
+                <div class="empty-icon">♧</div>
+
+                <h3>Your wardrobe is waiting</h3>
+
+                <p>
+                    Upload your first clothing item to get started.
+                </p>
+
+                <a href="#upload" class="primary-btn">
+                    Add Your First Item
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- UPLOAD SECTION -->
+
+    <section class="upload-section" id="upload">
+
+        <div class="upload-content">
+
+            <p class="eyebrow">BUILD YOUR DIGITAL CLOSET</p>
+
+            <h2>
+                Every outfit begins<br>
+                with <span>what you own.</span>
+            </h2>
+
+            <p>
+                Upload your clothing images and start building
+                your own digital wardrobe.
+            </p>
+
+
+            <!-- UPLOAD BOX -->
+
+            <div class="upload-box" id="uploadBox">
+
+                <div class="upload-icon">↑</div>
+
+                <h3>Upload your clothing</h3>
+
+                <p>
+                    Choose an image and select its category.
+                </p>
+
+
+                <!-- CATEGORY SELECTOR -->
+
+                <div class="upload-category">
+
+                    <label for="clothingCategory">
+                        Select Clothing Category
+                    </label>
+
+                    <select id="clothingCategory" required>
+
+                        <option value="">
+                            Choose a category
+                        </option>
+
+                        <option value="Tops">Tops</option>
+
+                        <option value="Bottoms">Bottoms</option>
+
+                        <option value="Shoes">Shoes</option>
+
+                        <option value="Accessories">Accessories</option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- IMAGE INPUT -->
+
+                <input
+                    type="file"
+                    id="imageInput"
+                    accept="image/jpeg,image/png,image/webp"
+                    hidden
+                >
+
+
+                <!-- UPLOAD BUTTON -->
+
+                <button class="primary-btn" id="uploadBtn" type="button">
+                    Choose Image
+                </button>
+
+                <p class="upload-note">
+                    JPG, PNG or WEBP supported
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- UPLOAD PREVIEW -->
+
+        <div class="upload-preview">
+
+            <img
+                src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=800"
+                alt="Clothing collection"
+                id="previewImage"
+            >
+
+            <div class="preview-label">
+                <span>✦</span>
+                Your style, your collection
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- OUTFIT SECTION -->
+
+    <section class="outfit-section" id="outfits">
+
+        <div class="section-heading">
+
+            <div>
+
+                <p class="eyebrow">A LITTLE STYLE INSPIRATION</p>
+
+                <h2>Discover Your Style</h2>
+
+                <p class="section-description">
+                    Explore outfit inspiration for your everyday moments.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- SMART OUTFIT BUILDER -->
+
+        <div class="ai-stylist">
+
+            <div class="ai-stylist-heading">
+
+                <span class="eyebrow">
+                    YOUR PERSONAL STYLE ASSISTANT
+                </span>
+
+                <h3>
+                    Meet Your AI Stylist<span>.</span>
+                </h3>
+
+                <p>
+                    Discover fresh combinations using clothes
+                    already in your wardrobe.
+                </p>
+
+            </div>
+
+
+            <!-- OUTFIT CONTROLS -->
+
+            <div class="stylist-controls">
+
+                <div class="stylist-field">
+
+                    <label for="outfitOccasion">
+                        Choose Occasion
+                    </label>
+
+                    <select id="outfitOccasion">
+
+                        <option value="Everyday">Everyday</option>
+
+                        <option value="College">College</option>
+
+                        <option value="Formal">Formal</option>
+
+                        <option value="Party">Party</option>
+
+                        <option value="Casual">Casual</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="stylist-field">
+
+                    <label for="outfitStyle">
+                        Choose Style
+                    </label>
+
+                    <select id="outfitStyle">
+
+                        <option value="Any">Surprise Me</option>
+
+                        <option value="Minimal">Minimal</option>
+
+                        <option value="Classic">Classic</option>
+
+                        <option value="Casual">Casual</option>
+
+                    </select>
+
+                </div>
+
+
+                <button
+                    class="primary-btn"
+                    id="generateOutfitBtn"
+                    type="button"
+                >
+                    ✦ Generate Outfit
+                </button>
+
+            </div>
+
+
+            <!-- GENERATED OUTFIT RESULT -->
+
+            <div
+                class="generated-outfit"
+                id="generatedOutfit"
+                aria-live="polite"
+            >
+
+                <div class="stylist-placeholder">
+
+                    <span>✦</span>
+
+                    <h4>Your next favourite outfit awaits.</h4>
+
+                    <p>
+                        Add clothes to your wardrobe and generate
+                        your first combination.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <p class="stylist-note" id="stylistMessage">
+                Your wardrobe is your inspiration.
+            </p>
+
+        </div>
+
+
+        <!-- EXISTING OUTFIT INSPIRATION -->
+
+        <div class="outfit-grid">
+
+            <div class="outfit-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=700"
+                    alt="Casual outfit inspiration"
+                >
+
+                <div class="outfit-info">
+                    <h3>Everyday Casual</h3>
+                    <p>Simple. Comfortable. Effortless.</p>
+                </div>
+
+            </div>
+
+
+            <div class="outfit-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=700"
+                    alt="Minimal outfit inspiration"
+                >
+
+                <div class="outfit-info">
+                    <h3>Minimal Aesthetic</h3>
+                    <p>Less, but thoughtfully styled.</p>
+                </div>
+
+            </div>
+
+
+            <div class="outfit-card">
+
+                <img
+                    src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?w=700"
+                    alt="Modern outfit inspiration"
+                >
+
+                <div class="outfit-info">
+                    <h3>Modern Classics</h3>
+                    <p>Timeless pieces, fresh combinations.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <a href="#" class="logo">
+            WARDROBE<span>AI.</span>
+        </a>
+
+        <p>
+            Rethink your wardrobe. Rediscover your style.
+        </p>
+
+        <p class="copyright">
+            © 2026 Wardrobe AI. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js?v=3"></script>
+
+</body>
+
+</html>
