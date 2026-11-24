@@ -2,9 +2,16 @@
 
 This repository presents the project as two distinct iterations. Each version has its own folder so the original work and the later interface upgrade are easy to distinguish.
 
+## Live demos
+
+- **Version 1 — Original site:** [wardrobe-ai.netlify.app](https://wardrobe-ai.netlify.app/)
+- **Version 2 — Upgraded site:** [mourya-2007.github.io/WARDROBE-AI](https://mourya-2007.github.io/WARDROBE-AI/)
+
 ## Version 1 — Original implementation
 
 Location: [`original-version/`](../original-version/)
+
+Live demo: https://wardrobe-ai.netlify.app/
 
 The original HTML, CSS and JavaScript frontend and Node.js backend are grouped here, with their own `package.json`, lockfile and `.gitignore`. This folder preserves the first implementation as a standalone project.
 
@@ -12,7 +19,9 @@ The original HTML, CSS and JavaScript frontend and Node.js backend are grouped h
 
 Location: [`upgraded-version/`](../upgraded-version/)
 
-The newer React + Vite interface has its own configuration and dependencies. Its full `src/` source tree, components, styles and assets still need to be added before it can be built or run.
+Live demo: https://mourya-2007.github.io/WARDROBE-AI/
+
+The newer React + Vite interface has its own configuration and dependencies. Its full `src/` source tree, components, styles and assets still need to be added before the upgraded implementation can be built from this repository.
 
 ## Repository layout
 
