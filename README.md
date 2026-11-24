@@ -1,31 +1,17 @@
 # Wardrobe AI
 
-A web-based AI wardrobe project for organizing clothing and exploring outfit ideas.
+A project documented across two separate iterations.
 
-## Live Demo
+## Project versions
 
-[Open Wardrobe AI](https://wardrobe-ai.netlify.app/)
+### 1. Original implementation
+The first version is preserved in [`original-version/`](./original-version/). It contains the original HTML, CSS, JavaScript frontend and Node.js backend, along with its own package files.
 
-## Run Locally
+### 2. Upgraded frontend
+The newer React + Vite frontend is kept separately in [`upgraded-version/`](./upgraded-version/). Its configuration is scaffolded, but the full `src/` source tree and assets still need to be added before it can be built.
 
-1. Clone this repository.
-2. Install the project dependencies:
+## Evolution notes
+See [`docs/project-evolution.md`](./docs/project-evolution.md) for the version history and current integration status.
 
-   ```bash
-   npm install
-   ```
-
-3. Start the backend using the project's configured start command in `package.json`.
-
-## Project Files
-
-- `index.html` — frontend page
-- `style.css` — styling
-- `script.js` — frontend logic
-- `server.js` — backend server
-- `package.json` and `package-lock.json` — Node.js dependencies
-
-## Notes
-
-- Do not commit your `.env` file or API keys.
-- `node_modules/` is excluded through `.gitignore`.
+## Important
+The original project files are grouped in a folder on this branch to make the two versions visually distinct. The default `main` branch and its existing root-level deployment files have not been changed.
