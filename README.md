@@ -2,6 +2,11 @@
 
 A project documented across two separate iterations.
 
+## Live demos
+
+- **Original version:** [wardrobe-ai.netlify.app](https://wardrobe-ai.netlify.app/)
+- **Upgraded version:** [mourya-2007.github.io/WARDROBE-AI](https://mourya-2007.github.io/WARDROBE-AI/)
+
 ## Project versions
 
 ### 1. Original implementation
@@ -12,6 +17,3 @@ The newer React + Vite frontend is kept separately in [`upgraded-version/`](./up
 
 ## Evolution notes
 See [`docs/project-evolution.md`](./docs/project-evolution.md) for the version history and current integration status.
-
-## Important
-The original project files are grouped in a folder on this branch to make the two versions visually distinct. The default `main` branch and its existing root-level deployment files have not been changed.
